@@ -27,10 +27,13 @@
   * ftp模块
     * [ftpgetfiles.cpp](tools1/c/ftpgetfiles.cpp) 调用ftp获取服务器文件
     * [ftpputfiles.cpp](tools1/c/ftpputfiles.cpp) ftp上传文件
+    * ftp客户端基于github上 https://github.com/codebrainz/ftplib 
   * tcp模块
     * [tcpputfiles.cpp](tools1/c/tcpputfiles.cpp) 采用tcp协议，实现文件上传的客户端
     * [tcpgetfiles.cpp](tools1/c/tcpgetfiles.cpp) 采用tcp协议，实现文件下载的客户端
     * [fileserver.cpp](tools1/c/fileserver.cpp) 文件传输的服务
+      * 采用异步通信机制
+      * 解决粘包和分包，采用自定义报文格式，用整形变量存放报文长度。
   * mysql模块
     * [diminingmysql.cpp](tools1/c/dminingmysql.cpp) 本程序是数据中心的公共功能模块，用于从mysql数据库源表抽取数据，生成xml文件
     * [xmltodb.cpp](tools1/c/xmltodb.cpp) 本程序是数据中心的公共功能模块，用于把xml文件入库到MySQL的表中
@@ -59,3 +62,7 @@
       * 反向代理外网端
     * [rinetdin.cpp](tools1/c/rinetdin.cpp) 网络代理服务程序-内网端
       * 反向代理内网端
+
+### 项目笔记
+
+- [项目笔记](note.md)
